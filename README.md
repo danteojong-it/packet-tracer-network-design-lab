@@ -55,14 +55,6 @@ This lab demonstrates enterprise network design principles by creating a segment
 
 Complete step-by-step guides are organized in the following documents:
 
-1. **[Network Design & Device Placement](docs/01-network-design.md)** - Hardware setup and physical connections
-2. **[Switch Configuration](docs/02-switch-configuration.md)** - VLAN creation and port assignment
-3. **[Router Configuration](docs/03-router-configuration.md)** - Inter-VLAN routing and DHCP setup
-4. **[Wireless Setup](docs/04-wireless-setup.md)** - Wireless network configuration and security
-5. **[Testing & Verification](docs/05-testing-verification.md)** - Ping tests and connectivity validation
-
-### Setup Steps
-
 1. **Design the Network** → Follow [01-network-design.md](docs/01-network-design.md)
 2. **Configure Switch** → Follow [02-switch-configuration.md](docs/02-switch-configuration.md)
 3. **Configure Router** → Follow [03-router-configuration.md](docs/03-router-configuration.md)
