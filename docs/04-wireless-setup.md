@@ -43,7 +43,7 @@ We need to configure the router to pull its IP address from the main Cisco route
 
 ## 💻 Connecting the Staff Laptops
 
-By default, laptops in Packet Tracer have Ethernet ports instead of Wi-Fi cards. We must swap the physical modules before connecting them.
+By default, laptops in Packet Tracer have Ethernet ports instead of Wi-Fi cards. We must swap the physical modules before connecting any of them.
 
 ### Step 1: Install the Wi-Fi Module
 Repeat these steps for **Laptop0** and **Laptop1**:
