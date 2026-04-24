@@ -7,7 +7,7 @@ A comprehensive guide to designing and configuring a multi-VLAN network with int
 This lab demonstrates enterprise network design principles by creating a segmented network for an organization with multiple departments (HR and Sales) plus wireless connectivity. The network uses VLANs for traffic separation, router-on-a-stick for inter-VLAN communication, and DHCP for automatic IP assignment.
 
 ### Network Topology
-![Network Topology](assets/network-topology.png)
+<img width="800" alt="Network Topology Screenshot" src="https://github.com/user-attachments/assets/545aaf7f-6e8f-4e81-a02b-0adb66ea4f2d"/>
 
 ## 🎯 Learning Objectives
 
@@ -61,12 +61,6 @@ Complete step-by-step guides are organized in the following documents:
 4. **[Wireless Setup](docs/04-wireless-setup.md)** - Wireless network configuration and security
 5. **[Testing & Verification](docs/05-testing-verification.md)** - Ping tests and connectivity validation
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Cisco Packet Tracer installed (version 8.0 or later)
-- Basic understanding of networking concepts
-
 ### Setup Steps
 
 1. **Design the Network** → Follow [01-network-design.md](docs/01-network-design.md)
@@ -74,91 +68,3 @@ Complete step-by-step guides are organized in the following documents:
 3. **Configure Router** → Follow [03-router-configuration.md](docs/03-router-configuration.md)
 4. **Setup Wireless** → Follow [04-wireless-setup.md](docs/04-wireless-setup.md)
 5. **Test Network** → Follow [05-testing-verification.md](docs/05-testing-verification.md)
-
-## 🔍 Key Concepts
-
-### VLANs (Virtual LANs)
-- Separate network traffic by department
-- VLAN 10 for HR, VLAN 20 for Sales, VLAN 30 for Wireless
-- Reduces broadcast domain size and improves security
-
-### Router-on-a-Stick
-- Single physical interface connected to switch trunk
-- Multiple subinterfaces (.10, .20, .30) for VLAN routing
-- Uses 802.1Q encapsulation for VLAN tagging
-
-### DHCP (Dynamic Host Configuration Protocol)
-- Automatic IP address assignment to clients
-- Gateway and network parameters distributed automatically
-- Reduces manual configuration errors
-
-### Wireless Security
-- SSID: **OfficeNet** (hidden or broadcast)
-- Security Mode: **WPA2 Personal**
-- Passphrase: **Office123**
-
-## 📸 Configuration Snapshots
-
-### Switch Configuration Log
-![Switch Config](assets/switch-config-log.png)
-
-### Router Configuration Log
-![Router Config](assets/router-config-log.png)
-
-### Device Connections
-![Device Connections](assets/device-connections.png)
-
-## ✅ Expected Results
-
-### DHCP Assignment
-- HR PCs receive IPs in range 192.168.10.2 - 192.168.10.254
-- Sales PCs receive IPs in range 192.168.20.2 - 192.168.20.254
-- Wireless devices receive IPs in range 192.168.30.2 - 192.168.30.254
-
-### Connectivity Tests
-- ✅ HR PC can ping router gateway (192.168.10.1)
-- ✅ HR PC can ping Sales PC (inter-VLAN routing works)
-- ✅ HR PC can ping wireless laptop (VLAN 30)
-- ✅ Wireless laptops connected to OfficeNet SSID
-- ✅ All devices can reach simulated internet (Cloud)
-
-## 🛠️ Troubleshooting
-
-### PCs Not Getting DHCP IPs
-- Check if router DHCP pools are configured correctly
-- Verify PCs have DHCP enabled (not Static)
-- Ensure switch ports are assigned to correct VLANs
-
-### Inter-VLAN Ping Fails
-- Verify router subinterfaces are configured for all VLANs
-- Check trunk port on switch is configured correctly
-- Ensure 802.1Q encapsulation is applied to all subinterfaces
-
-### Wireless Devices Won't Connect
-- Confirm SSID is set to "OfficeNet"
-- Verify WPA2 security and passphrase "Office123"
-- Check wireless router has IP from DHCP pool (VLAN 30)
-
-## 📖 Additional Resources
-
-- [Cisco Packet Tracer Documentation](https://www.netacad.com/courses/packet-tracer)
-- [VLAN Configuration Guide](https://www.cisco.com/c/en/us/support/docs/switches/catalystexpress-500g-12p-switch/47937-vlan-configure.html)
-- [Router Subinterface Configuration](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6000-series-switches/23948-171.html)
-
-## 📝 Lab Notes & Observations
-
-- Document any configuration changes or troubleshooting steps
-- Record ping test results and timing
-- Note any timeout patterns (typically first ping times out in Packet Tracer)
-
-## 👤 Author
-
-**danteojong-it**
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-**Last Updated:** April 24, 2026
